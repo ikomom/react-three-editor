@@ -30,9 +30,7 @@ const ThreeBox = () => {
     <Canvas
       resize={{ polyfill: ResizeObserver }}
       style={{ height: 300, width: 300 }}
-      className={
-        "m-auto bg-white mt-9 transition-transform cursor-pointer hover:shadow-xl hover:scale-110"
-      }
+      className="m-auto bg-white mt-9 transition-transform cursor-pointer hover:shadow-xl hover:scale-110"
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
