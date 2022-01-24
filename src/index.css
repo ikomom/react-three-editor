@@ -2,3 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "./assets/style/common.css";
+
+body {
+  @apply bg-fuchsia-300/30;
+}

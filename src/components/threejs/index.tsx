@@ -2,6 +2,7 @@ import * as THREE from "three";
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import ResizeObserver from "resize-observer-polyfill";
+import "./index.css";
 
 function Box(props: JSX.IntrinsicElements["mesh"]) {
   const ref = useRef<THREE.Mesh>(null!);
@@ -30,7 +31,7 @@ const ThreeBox = () => {
     <Canvas
       resize={{ polyfill: ResizeObserver }}
       style={{ height: 300, width: 300 }}
-      className="m-auto bg-white mt-9 transition-transform cursor-pointer hover:shadow-xl hover:scale-110"
+      className="mx-auto bg-white transition-transform cursor-pointer hover:shadow-xl hover:scale-110"
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
@@ -41,11 +42,11 @@ const ThreeBox = () => {
 
 const ThreeCompare = () => {
   return (
-    <div className={"flex"}>
-      <div className={"flex-auto"}>
+    <div className={"columns-2"}>
+      <div className={"translate-x-0"}>
         <ThreeBox />
       </div>
-      <div className={"flex-auto"}>
+      <div className={"translate-x-0"}>
         <ThreeBox />
       </div>
     </div>

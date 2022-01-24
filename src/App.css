@@ -1,3 +1,13 @@
-body {
-  @apply bg-fuchsia-300/30;
+.color-change {
+  animation: 🤣 1.5s infinite alternate;
+}
+
+@keyframes 🤣 {
+  0% {
+    color: #f00;
+  }
+
+  100% {
+    color: #000000;
+  }
 }
