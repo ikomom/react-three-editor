@@ -25,3 +25,8 @@ export function LoadingCircle() {
     </div>
   );
 }
+
+export function ChargingAnimate() {
+  const liSet = new Array(20).fill(1).map((e, i) => <li key={i} />);
+  return <ul className={"chargeAnimate"}>{liSet}</ul>;
+}

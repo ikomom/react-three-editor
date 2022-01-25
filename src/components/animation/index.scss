@@ -59,4 +59,33 @@
 }
 
 
+.chargeAnimate {
+  $offset: 120px;
 
+  li {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    margin: 0 1px;
+    border-radius: 50%;
+    display: inline-block;
+    transform: translateY($offset);
+    animation: moveUp 3s ease-in infinite;
+  }
+
+  @for $i from 1 to 21 {
+    li:nth-child(#{$i}) {
+      animation-duration: #{random(2000)/1000 + 2}s;
+      animation-delay: #{random(1000)/1000 + 1}s;
+    }
+  }
+
+  @keyframes moveUp {
+    0% {
+      transform: translateY($offset);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
